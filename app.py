@@ -3,8 +3,8 @@ import pickle
 from preprocess import clean_text
 
 # Load model
-model = pickle.load(open("model/model.pkl", "rb"))
-tfidf = pickle.load(open("model/tfidf.pkl", "rb"))
+model = pickle.load(open("model.pkl", "rb"))
+tfidf = pickle.load(open("tfidf.pkl", "rb"))
 
 st.title("🔍 Quora Question Pair Similarity")
 
@@ -24,3 +24,4 @@ if st.button("Check Similarity"):
         st.success("✅ Questions are Similar (Duplicate)")
     else:
         st.error("❌ Questions are Not Similar")
+
